@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search Engine</title>
+  </head>
+  <body>
+    <h1>Image Search Engine</h1>
+    <h2>Query Image:</h2>
+    <img src="{{ url_for('static', filename='uploads/' + results[0][0]) }}" style="max-width: 500px; max-height: 500px;">
+    <h2>Results:</h2>
+    <ul>
+    {% for result in results %}
+      <li>
+        <img src="{{ url_for('static', filename='uploads/' + result[0]) }}" style="max-width: 200px; max-height: 200px;">
+        <p>Score: {{ result[1] }}</p>
+      </li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>

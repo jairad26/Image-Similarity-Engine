@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Similarity Search Engine</title>
+</head>
+<body>
+    <h1>Image Similarity Search Engine</h1>
+    <h2>Query Image:</h2>
+    <img src="/uploads/{{ filename }}" width="224" height="224">
+    <form action="/search" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Search">
+    </form>
+</body>
